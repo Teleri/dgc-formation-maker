@@ -1,24 +1,5 @@
-# README
+Dance group formation creator.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+User can create new formation diagrams, which are interactive and group member icons can be moved around for each formation diagram.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Can export project to PDF.
