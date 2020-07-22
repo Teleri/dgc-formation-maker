@@ -1,5 +1,5 @@
-class ProjectController < ApplicationController
-  before_action :find_project, only: [:show, :edit, :update, :destory]
+class ProjectsController < ApplicationController
+  before_action :find_project, only: [:show, :edit, :update, :destroy]
   def index
     @projects = Project.all
   end
@@ -15,12 +15,25 @@ class ProjectController < ApplicationController
   def create
     @project = Project.new(params[:project])
     if @project.save
-      flash[:success] = 'Object successfully created'
+      @project.save!
       redirect_to @project
     else
-      flash[:error] = 'Something went wrong'
       render 'new'
     end
+  end
+
+  def edit
+    # code
+  end
+
+  def update
+    @project.update(project_params)
+    redirect_to @project
+  end
+
+  def destroy
+    @project.destroy
+    redirect_to root_path
   end
 
   private
