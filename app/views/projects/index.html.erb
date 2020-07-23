@@ -1,3 +1,15 @@
-<% @projects.each do |project| %>
-  <%= project.name %>
-<% end %>
+<div class="my-projects">
+  <h1>My Projects</h1>
+  <ul class="project-list">
+      <% @projects.each do |project| %>
+        <li class="project-item">
+          <div class="project-card">
+            <%= link_to project.name, project_path(project) %>
+          </div>
+        </li>
+      <% end %>
+  </ul>
+</div>
+<div class="links">
+  <button><%= link_to "Create a new project", new_project_path %></button>
+</div>
