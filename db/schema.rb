@@ -10,8 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_18_163136) do
-
+ActiveRecord::Schema.define(version: 2020_09_18_164436) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,14 +30,7 @@ ActiveRecord::Schema.define(version: 2020_09_18_163136) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "song"
     t.string "member_list"
-  end
-
-  create_table "slides", force: :cascade do |t|
-    t.string "timestamp"
-    t.bigint "member_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["member_id"], name: "index_slides_on_member_id"
+    t.integer "slide_count"
   end
 
   create_table "slides", force: :cascade do |t|
