@@ -1,4 +1,4 @@
 class Member < ApplicationRecord
-  belongs_to :project
+  belongs_to_many :slides
   validates :name, :color, presence: true
 end
