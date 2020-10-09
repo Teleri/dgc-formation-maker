@@ -1,3 +1,7 @@
+body {
+  background-color: rgb(47, 53, 48);
+}
+
 .my-projects h1 {
   color: #ffffff;
   font-family: Arial, Helvetica, sans-serif;
@@ -24,7 +28,7 @@
 }
 
 .project-card {
-  background-image: url('https://images.unsplash.com/photo-1595012651352-9b39b99c341b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');
+  background-image: url("https://images.unsplash.com/photo-1595012651352-9b39b99c341b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
   object-fit: cover;
   background-size: cover;
   background-position: center;

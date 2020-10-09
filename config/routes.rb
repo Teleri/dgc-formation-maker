@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  root to: 'pages#home'
-  # resources :projects
-  # resources :members
+  root to: 'projects#index'
+  resources :projects
+  resources :members
+  get 'reactdnd', to: 'pages#reactdnd'
 end
