@@ -1,5 +1,8 @@
-<div class="project-name">
+<div class="project-info">
   Project name: <%= @project.name %>
+  Song name: <%= @project.song %>
+  Member List: <%= @project.member_list %>
+  Slide count: <%= @project.slide_count %>
 </div>
 <div class="links">
   <%= link_to "Edit", edit_project_path(@project) %>
