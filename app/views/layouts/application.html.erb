@@ -10,12 +10,9 @@
   </head>
 
   <body>
-  <div class="container">
-    <div class="site-banner">
-      <h1 class="banner-text">DGC Formation Maker</h1>
+    <div class="container">
+      <%= yield %>
     </div>
-    <%= yield %>
-    <%= javascript_pack_tag 'hello_react' %>
-  </div>
+    <%= javascript_pack_tag 'application' %>
   </body>
 </html>
