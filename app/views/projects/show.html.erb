@@ -1,10 +1,20 @@
 <div class="project-info">
   Project name: <%= @project.name %>
+  <br>
   Song name: <%= @project.song %>
+  <br>
   Member List: <%= @project.member_list %>
+  <br>
   Slide count: <%= @project.slide_count %>
+  <br>
+  Slide list:
+  <% @project.slides.each do |item| %>
+    <%= link_to "#{item.timestamp}", project_slide_path(@project.slides) %>
+  <% end %>
 </div>
 <div class="links">
+  <%= link_to "New Slide", new_project_slide_path(@project, @slide) %>
+  <br>
   <%= link_to "Edit", edit_project_path(@project) %>
   <br>
   <%= link_to project_path(@project), method: :delete, data: { confirm: "Are you sure?" } do %>

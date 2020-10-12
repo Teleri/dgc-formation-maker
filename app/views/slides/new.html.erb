@@ -1,0 +1,7 @@
+<%= simple_form_for [@project, @slide] do |f| %>
+  <%= f.input :timestamp %>
+  <%= f.button :submit %>
+<% end %>
+<div class="links">
+  <%= link_to "Cancel", :back %>
+</div>

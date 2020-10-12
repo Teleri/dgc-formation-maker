@@ -1,0 +1,11 @@
+<div class="container">
+  <ul>
+    <h3>Slides Index</h3>
+    <% @slides.each do |slide| %>
+      <li>
+        <%= slide.timestamp %>
+        <br>
+      </li>
+    <% end %>
+  </ul>
+</div>

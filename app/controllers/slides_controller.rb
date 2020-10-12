@@ -1,11 +1,11 @@
 class SlidesController < ApplicationController
   before_action :find_slide, only: [:show, :edit, :update, :destroy]
+  before_action :find_project, only: [:new, :create]
   def index
     @slides = Slide.all
   end
 
   def show
-    # code
   end
 
   def new
@@ -14,9 +14,10 @@ class SlidesController < ApplicationController
 
   def create
     @slide = Slide.new(slide_params)
+    @slide.project_id = @project.id
     if @slide.save
       @slide.save!
-      redirect_to @slide
+      redirect_to @project
     else
       render 'new'
     end
@@ -44,5 +45,9 @@ class SlidesController < ApplicationController
 
   def find_slide
     @slide = Slide.find(params[:id])
+  end
+
+  def find_project
+    @project = Project.find(params[:project_id])
   end
 end

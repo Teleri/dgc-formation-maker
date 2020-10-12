@@ -5,7 +5,6 @@ class ProjectsController < ApplicationController
   end
 
   def show
-    # code
   end
 
   def new
@@ -23,7 +22,6 @@ class ProjectsController < ApplicationController
   end
 
   def edit
-    # code
   end
 
   def update
@@ -40,6 +38,10 @@ class ProjectsController < ApplicationController
 
   def project_params
     params.require(:project).permit(:name, :song, :member_list, :slide_count)
+  end
+
+  def find_slide
+    @slide = Slide.find(params[:slide_id])
   end
 
   def find_project
